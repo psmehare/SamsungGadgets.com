@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+        body{
+            padding: 0px;
+            margin: 0px;
+            font-size: 62.5%;
+            font-family: 'Poppins', sans-serif;
+            /* overflow: hidden; */
+            /* position: relative; */
+        }
+        *{
+            box-sizing: border-box;
+        }
+        form{
+            border: 1px solid black;
+            width: 400px;
+            height: 500px;
+            margin: 0rem auto;
+            padding: 0.3rem;
+            text-align: center;
+            background: rgb(188, 148, 148)
+        }
+        h1{
+            text-align: center;
+        }
+        #one,#two{
+            width: 49%;
+            display: inline-block;
+            padding: 0.4rem 0.6rem;
+            border-radius: 0.8rem;
+            outline: none;
+            border: none;
+        }
+        input{
+            width: 99%;
+            margin: 0.8rem 0rem;
+            padding: 0.4rem 0.6rem;
+            border-radius: 0.8rem;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Sign In</h1>
+        <input type="text" id="one" placeholder="First Name"> <input type="text" id="two" placeholder="Last Name">
+        <input type="email" placeholder="Enter email">
+        <input type="password" placeholder="Enter Password">
+        <input type="password" placeholder="Confirm Password">
+        <input type="checkbox">I Ceept
+    </form>
+</body>
+</html>

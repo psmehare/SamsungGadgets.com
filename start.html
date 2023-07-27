@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main_div{
+            border: 1px solid black;
+            margin: 200px auto;
+            padding:10px;
+            /* display: flex;
+            justify-content: center; */
+            width: 500px;
+            /* align-items: center; */
+        }
+       .main_div>div{
+        border: 1px solid black;
+        height: 40px;
+        padding: 0px 8px;
+        overflow: hidden;
+        z-index: -1;
+       }
+
+       .main_div>div.down{
+        height: 100px;
+       }
+
+       .main_div>div>h1{
+            font-size: 20px;
+       }
+
+       .drop,.drop1,.drop2{
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        z-index: 1000;
+       }
+       .drop>div,.drop1>div,.drop2>div{
+        border: 1px solid black;
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        margin-left: 5px;
+       }
+
+       .drop>div.change,.drop1>div.change,.drop2>div.change{
+        background: goldenrod;
+       }
+    </style>
+</head>
+<body>
+    <div class="main_div">
+        <div>
+            <h1>First</h1>
+            <div class="drop">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div>
+            <h1>Sec</h1>
+            <div class="drop1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div>
+            <h1>Third</h1>
+            <div class="drop2">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script>
+   var drop;
+   let main_div = document.querySelectorAll('.main_div>div');
+   drop = document.querySelectorAll('.drop>div') 
+
+   function toBeDown(id){
+        main_div.forEach((data,idd)=>{
+            if(id == idd){
+                data.style.height = '100px'
+                child = data.childNodes[3].children;
+                child = Array.from(child)
+                child.forEach((data,id)=>{
+                    data.addEventListener('click',()=>{
+                        data.classList.toggle('change')
+                    })
+                   
+                })
+            }
+            else{ 
+                data.style.height = '40px'
+                child = data.childNodes[3].children;
+                child = Array.from(child)
+                child.forEach((data,id)=>{
+                    data.classList.remove('change')
+                })
+            }
+        })
+   }
+
+   main_div.forEach((div,id)=>{
+    div.addEventListener('click',()=>{
+        toBeDown(id)
+    })
+   });
+
+
+</script>
+
+</html>

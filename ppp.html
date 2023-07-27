@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            border: 1px solid red;
+            padding: 5px;
+            /* overflow: hidden; */
+           
+        }
+
+        /* .parent_t{
+            border: 1px solid green;
+            display: flex;
+            padding: 3px;
+            width: 150%;
+            scroll-behavior: smooth;
+            transition: all 0.2s ease-in;
+        }
+
+        .child{
+            border: 1px solid black;
+            height: 200px;
+            width: 500px;
+            
+        } */
+
+        .parent_t{
+            border: 1px solid black;
+            display: grid;
+            grid-auto-flow: column;
+            padding: 2px;
+            width: 150%;
+        }
+        .child{
+            border: 1px solid red;
+            height: 200px;
+            flex-basis: 300px;
+        }
+
+        @media(max-width:1164px){
+            .parent_t{
+                grid-auto-columns: calc(100% / 4);
+            }
+        }
+
+        @media(max-width:900px){
+            .parent_t{
+                grid-auto-columns: calc(100% / 3);
+            }
+        }
+
+        @media(max-width:600px){
+            .parent_t{
+                grid-auto-columns: calc(100% / 2);
+            }
+        }
+
+        @media(max-width:400px){
+            .parent_t{
+                grid-auto-columns: calc(100% / 1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="parent">
+       <div class="parent_t">
+            <div class="child">1</div>
+            <div class="child">2</div>
+            <div class="child">3</div>
+            <div class="child">4</div>
+            <div class="child">5</div>
+            <div class="child">6</div>
+            <div class="child">7</div>
+            <div class="child">8</div>
+            <div class="child">9</div>
+       </div>
+    </section>
+    <button onclick="backword()">B</button>
+    <button onclick="forword()">F</button>
+</body>
+
+
+<script>
+    var parent_t = document.querySelector('.parent_t')
+    var child = document.getElementsByClassName('child')
+    console.log(child)
+    function forword(){
+        parent_t.append(child[0]);
+    }
+
+    function backword(){
+       parent_t.prepend(child[child.length-1]);
+    }
+</script>
+
+</html>

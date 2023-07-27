@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .some{
+            border: 1px solid red;
+            padding: 10px;
+            display: grid;
+            /* grid-template-columns: 200px 500px 200px; */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* grid-template-columns: repeat(3, 1fr); */
+            grid-auto-rows: 100px;
+            grid-gap: 20px;
+            /* grid-template-rows: 200px 500px 200px; */
+            grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+        }
+
+        .some>div{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <section class="some">
+        <div id="get">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </section>
+</body>
+
+<script>
+    let get = document.querySelector('#get')
+    let gett = document.querySelector('.some')
+
+    let cs = getComputedStyle(gett)
+
+    console.log(cs.padding)
+
+    // console.log(gett.style.padding)
+    // console.dir(get)
+</script>
+</html>

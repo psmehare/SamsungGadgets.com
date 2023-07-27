@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+body{
+    padding: 0px;
+    margin: 0px;
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    /* overflow: hidden; */
+}
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.tab_section{
+    /* border: 1px solid black; */
+    padding: 0.4rem;
+    display: flex;
+    justify-content: center;
+    background: rgba(216, 208, 208, 0.225);
+}
+
+.tab_section>div:last-child{
+    background: rgba(241, 240, 240, 0.225);
+}
+
+.tab{
+    height: 600px;
+    /* border: 1px solid red; */
+    width: 250px;
+    padding: 0.2rem;
+    background: white;
+    border-radius: 0.8rem;
+    margin-left: 0.4rem;
+}
+
+.tab_img{
+    /* border: 1px solid black; */
+    text-align: center;
+    cursor: pointer;
+}
+
+.tab_h2_div{
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+.tab_h2_div>h2{
+    font-weight: 600;
+}
+
+.tab_p{
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+.tab_p>p{
+    font-size: 0.7rem;
+}
+
+.tab_select{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+
+}
+
+.tab_select>div{
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    background: black;
+    margin: 0rem 0.2rem;
+    cursor: pointer;
+}
+
+.tab_select>div:nth-child(2){
+    background: silver;
+}
+
+.tab_select>div:nth-child(3){
+    background: rgb(232, 157, 169);
+}
+
+.tab_varients{
+    /* border: 1px solid black; */
+    padding: 0.5rem;
+    height: auto;
+    text-align: center;
+}
+
+.tab_varients>a{
+    border: 1px solid black;
+    padding: 0.5rem 0.8rem;
+    display: inline-block;
+    border-radius: 1.0rem;
+}
+
+.tab_info{
+    /* border: 1px solid black; */
+    text-align: center;
+    padding: 0rem 0.2rem;
+}
+
+.tab_info>p{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0rem;
+}
+
+.tab_basic_info{
+    /* border: 1px solid black; */
+    text-align: center;
+}
+.tab_basic_info>p{
+    font-size: 0.7rem;
+    color: blue;
+}
+
+.tab_basic_info>p>span{
+    margin-left: 0.2rem;
+    text-decoration: line-through;
+    color: black;
+    margin-right: 0.3rem;
+}
+
+.tab_btn{
+    /* border: 1px solid black; */
+    text-align: center;
+    padding: 0.2rem;
+    margin-top: 2.0rem;
+}
+
+.tab_btn>button{
+    border: none;
+    padding: 0.8rem 3.0rem;
+    background: black;
+    color: white;
+    border-radius: 1.2rem;
+}
+
+.combine{
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    height: 390px;
+    /* overflow: hidden; */
+}
+
+.combine>img{
+ height: 100%;
+ width: 100%;
+    
+}
+
+.tab>h2{
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+
+@media(max-width:958px){
+    .tab{
+        height: 550px;
+        width: 220px;
+    }
+    
+    .tab_img{
+        /* border: 1px solid black; */
+        text-align: center;
+    }
+
+    .tab_img>img{
+        height: 180px;
+    }
+    
+    .tab_p>p{
+        margin: 6px 0px;
+    }
+    
+    .tab_h2_div>h2{
+        font-weight: 600;
+        font-size: 0.8rem;
+    }
+    
+    
+    .tab_p>p{
+        font-size: 0.8rem;
+    }
+
+    
+    .tab_select>div{
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        background: black;
+        margin: 0rem 0.2rem;
+    }
+    
+    .tab_varients{
+        padding: 0.4rem;
+    }
+    
+    .tab_varients>a{
+        border: 1px solid black;
+        padding: 0.5rem 0.8rem;
+        display: inline-block;
+        border-radius: 1.0rem;
+    }
+    
+    .tab_info{
+        padding: 0rem 0.2rem;
+    }
+    
+    .tab_info>p{
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin: 0rem;
+    }
+
+    
+    .tab_btn>button{
+        border: none;
+        padding: 0.6rem 2.8rem;
+        background: black;
+        color: white;
+        border-radius: 1.2rem;
+    }
+    
+    .combine{
+        /* border: 1px solid black; */
+        box-sizing: border-box;
+        height: 336px;
+        /* overflow: hidden; */
+    }
+    
+    .combine>img{
+     height: 100%;
+     width: 100%;
+        
+    }
+    
+    .tab>h2{
+        text-align: center;
+        margin-top: 2.5rem;
+    }
+}
+
+@media(max-width:775px){
+    .tab_section{
+        flex-wrap: wrap;
+    }
+
+    .tab{
+        margin: 0.3rem 0.3rem;
+    }
+}

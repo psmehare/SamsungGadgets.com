@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+body{
+    padding: 0px;
+    margin: 0px;
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    /* overflow: hidden; */
+}
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.sm_grand{
+    border: 1px solid rgba(0, 0, 0, 0.114);
+    padding: 0.2rem;
+    position: relative;
+    width: auto;
+    overflow: hidden;
+    background: rgba(167, 165, 165, 0);
+}
+
+.sm_parent{
+    /* border: 1px solid black; */
+    padding: 0.2rem;
+    display: grid;
+    grid-auto-flow: column;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    width: 150%;
+    /* width: auto; */
+    /* justify-items: center; */
+}
+
+.sm_parent>.crd{
+    /* border: 1px solid black; */
+    width: 305px;
+    height: 140px;
+    display: flex;
+    padding: 0.2rem;
+    /* align-items: center; */
+}
+
+.sm_parent>.crd>div{
+    /* border: 1px solid red; */
+}
+
+.one_one{
+    display: flex;
+    align-items: center;
+    width: 35%;
+    justify-content: center;
+}
+
+.one_two{
+    width: 70%;
+    padding: 0.3rem;
+}
+
+.one_two>h3{
+    /* border: 1px solid black; */
+    margin-top: 1.4rem;
+    font-size: 0.8rem;
+}
+
+.one_two>p{
+    /* border: 1px solid red; */
+}
+
+.ext{
+    width: 40%;
+}
+
+.extt{
+    width: 45%;
+}
+
+.sm_grand>img{
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    /* border: 1px solid black; */
+    padding: 0.2rem;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: black;
+}
+
+.sm_grand>img:last-child{
+    right: 0;
+}
+
+
+
+/* @media(max-width:1164px){
+    .sm_parent{
+        grid-auto-columns: calc(100% / 4);
+        background: red;
+    }
+} */
+
+/* @media(max-width:999px){
+    .sm_parent{
+        grid-auto-columns: calc(100% / 3);
+        grid-gap: 0px;
+    column-gap: 0px;
+    }
+}
+
+
+@media(max-width:757px){
+    .sm_parent{
+        grid-auto-columns: calc((100% / 2));
+        grid-gap: 0px;
+    column-gap: 0px;
+        /* justify-items: center; */
+    /* } */
+/* } */
+
+/* @media(max-width:527px){
+    .sm_parent{
+        grid-auto-columns: calc(100% / 1);
+        grid-gap: 0px;
+    column-gap: 0px;
+    } 
+} */ */

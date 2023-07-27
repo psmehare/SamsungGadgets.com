@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+body{
+    padding: 0px;
+    margin: 0px;
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.Compare{
+    /* border: 1px solid black; */
+    padding: 0.2rem;
+    background: rgba(128, 128, 128, 0.103);
+}
+
+.container{
+    width: 70%;
+    /* border: 1px solid black; */
+    margin: 0rem auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.container>div{
+    /* border: 1px solid brown; */
+    flex-basis: 250px;
+    margin: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+    background: white;
+}
+
+.img,.img1{
+    height: 250px;
+    /* border: 1px solid black; */
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.img>img,.img1>img{
+    height: 200px;
+}
+
+.h2,.h21{
+    text-align: center;
+    /* border: 1px solid black; */
+}
+
+.color,.color1{
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+.select,.select1{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0rem;
+}
+
+.select>div,.select1>div{
+    margin: 0rem 0.4rem;
+    cursor: pointer;
+}
+
+.select>div:first-child,.select1>div:first-child{
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background: black;
+}
+
+.select>div:nth-child(2),.select1>div:nth-child(2){
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background: brown;
+}
+
+.select>div:nth-child(3),.select1>div:nth-child(3){
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background: green;
+}
+
+.varients,.varients1{
+    /* border: 1px solid black; */
+    padding: 0.5rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+
+.varients>a,.varients1>a{
+    border: 1px solid black;
+    border-radius: 1.2rem;
+    padding: 0.4rem 0.8rem;
+    margin: 0rem 1.2rem;
+}
+
+.info,.info1{
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+.info>p,.info1>p{
+    font-size: 1.0rem;
+    color: black;
+}
+
+.btn,.btn1{
+    /* border: 1px solid black; */
+    padding: 0.5rem;
+    text-align: center;
+    margin: 0.3rem 0rem;
+}
+
+.btn>button,.btn1>button{
+    border-radius: 1.2rem;
+    outline: none;
+    padding: 0.7rem 2.0rem;
+    background: black;
+    color: white;
+    border: none;
+}

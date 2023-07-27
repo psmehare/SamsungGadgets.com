@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+body{
+    padding: 0px;
+    margin: 0px;
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.header_section{
+    border: 1px solid black;
+    padding: 0.2rem;
+}
+
+.width_container{
+    width: 95%;
+    border: 1px solid black;
+    margin: 0rem auto;
+    padding: 0.1rem;
+    display: flex;
+}
+
+.first{
+    border: 1px solid black;
+    padding: 0.1rem;
+    flex-grow: 0.3;
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+}
+
+.first>h2{
+    font-size: 1.2rem;
+    margin: 0rem;
+}
+
+.sec{
+    border: 1px solid black;
+    padding: 0.1rem;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 2;
+}
+
+.sec_first,.sec_sec{
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+}
+.sec_div_first_ul,.sec_div_sec_ul{
+    padding: 0rem;
+    display: flex;
+}
+
+.simple_li{
+    border: 1px solid red;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+    position: relative;
+}
+
+.next{
+    display: none;
+}
+
+.cross{
+    display: none;
+}
+
+.third{
+    border: 1px solid black;
+    padding: 0.1rem;
+    flex-grow: 0.3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+    flex-basis: 100px;
+}
+
+.third>img{
+    height: 1.7rem;
+}
+
+.third>img:last-child{
+    display: none;
+}
+
+/* *************************************DIV STARTED ******************************************/
+
+.open_div{
+    border: 1px solid black;
+    padding: 0.1rem;
+    position: absolute;
+    top: 50px;
+    width:400px;
+    left: 0px;
+    height: 400px;
+    padding: 0.1rem;
+    display: flex;
+}
+
+.open_div_one{
+    border: 1px solid green;
+    flex-basis: 35%;
+}
+
+.open_div_two{
+    border: 1px solid green;
+    flex-basis: 65%;
+}
+
+/* *************************************DIV ENDED ******************************************/
+
+
+
+
+
+
+
+
+
+
+
+/* ***************************************** MEDIA QURIES STARTED************************************ */
+
+@media(max-width:1152px){
+    .first>h2{
+        font-size: 1.7rem;
+    }
+    /* .header_section{
+        z-index: -1;
+    } */
+    .width_container{
+        justify-content: space-between;
+    }
+    .first{
+        flex-grow: 0.1rem;
+    }
+    .third{
+        padding: 0rem;
+        flex-grow: 0.1;
+    }
+
+    .third>img:last-child{
+        display: block;
+    }
+    .sec{
+        position: absolute;
+        top: 0px;
+        display: block;
+        width: 280px;
+        right: -280px;
+        background: white;
+    }
+
+    .sec_div_first_ul,.sec_div_sec_ul{
+        display: block;
+        width: 100%;
+        border: 1px solid black;
+    }
+
+    .sec_first{
+        z-index: -1;
+    }
+
+    .simple_li{
+        left: 100px;
+        font-size: 1.2rem;
+        display: flex;
+        margin: 0.5rem 0rem;
+        position: sticky;
+        
+    }
+
+    .open_div{
+        flex-direction: column;
+        background: white;
+        z-index: 1000;
+    }
+
+    .next{
+        /* border: 1px solid black; */
+        display: block;
+        margin-left: 240px;
+        position: absolute;
+    }
+
+    .next>img{
+        height: 1.2rem;
+        text-align: center;
+        padding-top: 0.2rem;
+    }
+
+    .cross{
+        display: block;
+        display: flex;
+        justify-content: end;
+        padding: 0.3rem;
+    }
+    .cross>img{
+        height: 1.4rem;
+    }
+
+}
+
+/* ***************************************** MEDIA QURIES ENDED************************************ */

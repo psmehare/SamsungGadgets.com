@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        .parent{
+            border: 1px solid black;
+            padding: 3px;
+            background: black;
+            height: 500px;
+            width: 400px;
+            margin: 0rem auto;
+            position: relative;
+        }
+
+        .child{
+            background: red;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 100%;
+            width: 100%;
+            transition: 0.6s ease-in;
+        }
+        button{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <button id="slide">Slide</button>
+        <div class="child">
+
+        </div>
+    </div>
+</body>
+
+<script>
+    let slide = document.getElementById('slide')
+    
+    slide.addEventListener('click',()=>{
+        let sib = slide.nextElementSibling
+        sib.style.left = '0%'
+    })
+</script>
+</html>

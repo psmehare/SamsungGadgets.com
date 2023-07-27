@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grand{
+            border: 1px solid black;
+            padding: 0.2rem;
+            position: relative;
+        }
+
+        .grand>img{
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            border: 1px solid black;
+            padding: 0.5rem;
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .grand>img:first-child{
+            position: absolute;
+            left: 0px;
+        }
+
+        .grand>img:last-child{
+            position: absolute;
+            right: 0px;
+        }
+
+        .parent{
+            border: 1px solid red;
+            /* padding: 0.3rem; */
+            display: grid;
+            grid-auto-flow: column;
+            scroll-behavior: smooth;
+            /* min-width: 1238px; */
+        }
+
+        .parent>div{
+            border: 1px solid black;
+            height: 200px;
+            flex-basis: 200px;
+            margin: 0rem 0.2rem;
+        }
+
+        @media(max-width:1283px){
+            .parent{
+                overflow: hidden;
+                grid-auto-columns: calc(100% / 5);
+            }
+        }
+
+        @media(max-width:1062px){
+            .parent{
+                overflow: hidden;
+                grid-auto-columns: calc(100% / 4);
+            }
+        }
+
+        @media(max-width:791px){
+            .parent{
+                overflow: hidden;
+                grid-auto-columns: calc(100% / 3);
+            }
+        }
+
+        @media(max-width:625px){
+            .parent{
+                overflow: hidden;
+                grid-auto-columns: calc(100% / 2);
+            }
+        }
+
+        @media(max-width:435px){
+            .parent{
+                overflow: hidden;
+                grid-auto-columns: calc(100% / 1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grand">
+        <img src="Img/left-arrow.png" id="left">
+        <div class="parent">
+            <div class="crd">0</div>
+            <div class="crd">1</div>
+            <div class="crd">2</div>
+            <div class="crd">3</div>
+            <div class="crd">4</div>
+            <div class="crd">5</div>
+        </div>
+        <img src="Img/right-arrow.png" id="right" onclick="left()">
+    </div>
+</body>
+
+
+
+</html>
+
+<script>
+    var getparent = document.querySelectorAll('.parent>div')
+    var width = document.querySelector('.crd').offsetWidth
+    console.log(width)
+    
+    // getparent.addEventListener('mousedown',(e)=>{
+        // console.log(e.pageX)---x axis ki position dega
+        // console.log(getparent.scrollLeft)
+    // });
+
+    // let cards = document.querySelector('.crd').offsetWidth;
+    // let cards = document.querySelector('.crd');
+    // console.dir(cards)
+    // let img = document.querySelectorAll('.grand>img');
+
+    // img.forEach((data) =>{
+    //     data.addEventListener('click',()=>{
+    //         if(data.id == 'left'){
+    //             data.style.left = -cards
+    //         }
+    //         else{
+    //             data.style.left = cards
+    //         }
+    //     })
+    // })
+
+    // console.log(getparent.scrollLeft)
+
+    // img.forEach((data)=>{
+    //     data.addEventListener('click',()=>{
+    //         getparent.scrollLeft += data.id === 'left' ? -cards : cards
+    //         console.log(cards)
+    //     })
+    // })
+
+    var plus = 0;
+
+    function left(){
+        // console.log(getparent.length)
+        plus++
+        console.log(plus);
+        if(plus > getparent.length-1){
+            getparent[plus].style.left = `-${plus} * ${width}`
+        }
+    }
+
+</script>
