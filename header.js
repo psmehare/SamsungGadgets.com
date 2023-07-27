@@ -3,7 +3,7 @@ let hidden = document.querySelector('.hidden')
 let header_two = document.querySelector('.header_two')
 let cross = document.getElementById('cross')
 let getouterwidth = window.outerWidth     
-// console.log(getouterwidth)
+console.log(getouterwidth)
 menu.addEventListener('click',()=>{
     hidden.style.display = 'block'
     header_two.style.right = '0px'
@@ -116,6 +116,7 @@ if(getouterwidth < 1278){
     
     main_header_one_ul_li.forEach((data,id)=>{
         data.addEventListener('click',()=>{
+            console.log('clicked')
             let childs = data.childNodes[3]
             search_left_arrow.style.display = 'block'
             none.style.display = 'none'
@@ -244,7 +245,7 @@ else{
 
 }
 var imgArray = ['Img/pics/1.webp','Img/pics/2.webp','Img/pics/3.jpg','Img/pics/4.jpg','Img/pics/5.jpg']
-if(getouterwidth>540){
+if(getouterwidth>744){
    
     explore_sub2.forEach((div,id)=>{
         div.addEventListener('mouseover',()=>{
