@@ -297,6 +297,9 @@ let drop_two_img = document.querySelector('.compare_img>img')
 let comapre_selectors = document.querySelector('.comapre_selectors')
 let comapre_info = document.querySelector('.comapre_info>h2');
 let comapre_selectors_div = document.querySelectorAll('.comapre_selectors>div')
+let compare_details_two = document.querySelector('.compare_details_two')
+let compare_details_two_h1 = document.querySelectorAll('.compare_details_two>div>h1')
+console.log(compare_details_two_h1) 
 let compre_rs = document.querySelector('.compre_rs')
 let storage = document.querySelector('.storage a')
 console.log(drop_two_li)
@@ -346,6 +349,12 @@ var blankArrayImg = []
 function toBeDropped(id){
 
     let getData = allDataObj[id]
+    console.log(getData.size)
+
+    // compare_details_two_h1.forEach((data,id)=>{
+    //     data.style.display = 'block'
+    // })
+        
 
     compare_details_two.innerHTML = `
         <div>
@@ -467,6 +476,8 @@ let drop_three_li = document.querySelectorAll('.drop_three ul li');
 let drop_two_img3 = document.querySelector('.compare_img3>img')
 let comapre_selectors3 = document.querySelector('.comapre_selectors3')
 let comapre_info3 = document.querySelector('.comapre_info3>h2');
+
+
 // let comapre_selectors_div3 = document.querySelectorAll('.comapre_selectors3>div')
 let compare_details_three = document.querySelector('.compare_details_three')
 let compre_rs3 = document.querySelector('.compre_rs3')
@@ -482,7 +493,7 @@ comapre_three_divs.addEventListener('click',()=>{
 
 var blankArrayImg = []
 function toBeDropped3(id){
-
+   
     let getData = allDataObj[id]
     compare_details_three.innerHTML = `
         <div>
@@ -609,7 +620,7 @@ let comapre_info4 = document.querySelector('.comapre_info4>h2');
 let compare_details_four = document.querySelector('.compare_details_four')
 let compre_rs4 = document.querySelector('.compre_rs4')
 let storage4 = document.querySelector('.storage4 a')
-let compare_details_two = document.querySelector('.compare_details_two')
+// let compare_details_two = document.querySelector('.compare_details_two')
 console.log(drop_two_li)
 let drop_four_h2 = document.querySelector('.drop_four>h2')
 comapre_four_divs.addEventListener('click',()=>{

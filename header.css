@@ -1004,7 +1004,11 @@ a{
     /* color: gray; */
 }
 
-.compare_details_two>div>h1:first-child{
+/* .compare_details_two>div>h1:first-child{
+    display: none;
+} */
+
+.h{
     display: none;
 }
 
@@ -2036,7 +2040,7 @@ a{
 
     .compare_details_three>div>h1{
         /* border: 2px solid red; */
-        margin-top: 50px;
+        /* margin-top: 50px; */
     }
     
     .compare_details_two>div>h1,.compare_details_three>div>h1,.compare_details_four>div>h1{
